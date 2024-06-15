@@ -26,7 +26,7 @@ st.title('Hate Speech Detection chat')
 
 
 def tfidf_vectorizer():
-    vectorizer = joblib.load(open('pickled_file\\final_tfidf.pkl','rb')) 
+    vectorizer = joblib.load(open('pickled_file/final_tfidf.pkl','rb')) 
     return vectorizer
 #print(vectorizer)
 
