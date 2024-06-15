@@ -31,18 +31,18 @@ def tfidf_vectorizer():
 #print(vectorizer)
 
 def pos_vectorizer():
-    pos_vectorizer = joblib.load(open('pickled_file\\final_pos.pkl','rb'))
+    pos_vectorizer = joblib.load(open('pickled_file/final_pos.pkl','rb'))
     return pos_vectorizer
 
 
 def model():
-    model = joblib.load(open('pickled_file\\final_model.pkl','rb'))
+    model = joblib.load(open('pickled_file/final_model.pkl','rb'))
     return model
 
 def model_preprocessing(input_str):
     test_tfidf_ = tfidf_vectorizer().fit_transform([input_str]).toarray()
     tweet_tags = []
-    tokens = joblib.load(open('pickled_file\\final_tokens.pkl','rb'))
+    tokens = joblib.load(open('pickled_file/final_tokens.pkl','rb'))
     tags = nltk.pos_tag(tokens)
     tag_list = [x[1] for x in tags]
     tag_str = " ".join(tag_list)
