@@ -21,6 +21,7 @@ if not os.path.exists(nltk_data_dir):
 nltk.data.path.clear()
 nltk.data.path.append(nltk_data_dir)
 nltk.download("stopwords", download_dir=nltk_data_dir)
+nltk.download("averaged_perceptron_tagger", download_dir=nltk_data_dir)
 
 stopwords = nltk.corpus.stopwords.words('english')
 other_exclusions = ["#ff", "ff", "rt"]
