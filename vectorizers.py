@@ -13,6 +13,7 @@ from sklearn.feature_selection import SelectFromModel
 from sklearn.metrics import classification_report
 from sklearn.svm import LinearSVC
 import numpy as np
+import os
 
 nltk_data_dir = "./resources/nltk_data_dir/"
 if not os.path.exists(nltk_data_dir):
